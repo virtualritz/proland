@@ -17,7 +17,7 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3d" />
-					<Add library="proland-core-3_3d" />
+					<Add library="proland-core-4_0d" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -32,7 +32,7 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3" />
-					<Add library="proland-core-3_3" />
+					<Add library="proland-core-4_0" />
 				</Linker>
 			</Target>
 		</Build>

@@ -1,6 +1,6 @@
-PROLAND FOREST PLUGIN version 3.3
+PROLAND FOREST PLUGIN version 4.0
 
 REQUIRES: 
-  Proland core library version 3.3.
+  Proland core library version 4.0.
   
 This directory defines a "forest" plugin for the Proland core library.

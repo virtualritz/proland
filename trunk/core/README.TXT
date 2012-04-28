@@ -1,4 +1,4 @@
-PROLAND CORE LIBRARY version 3.3
+PROLAND CORE LIBRARY version 4.0
 
 REQUIRES:
   Ork library version 3.1.

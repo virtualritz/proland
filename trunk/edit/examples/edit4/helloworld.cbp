@@ -17,11 +17,11 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3d" />
-					<Add library="proland-core-3_3d" />
-					<Add library="proland-terrain-3_3d" />
-					<Add library="proland-graph-3_3d" />
-					<Add library="proland-river-3_3d" />
-					<Add library="proland-edit-3_3d" />
+					<Add library="proland-core-4_0d" />
+					<Add library="proland-terrain-4_0d" />
+					<Add library="proland-graph-4_0d" />
+					<Add library="proland-river-4_0d" />
+					<Add library="proland-edit-4_0d" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,11 +36,11 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3" />
-					<Add library="proland-core-3_3" />
-					<Add library="proland-terrain-3_3" />
-					<Add library="proland-graph-3_3" />
-					<Add library="proland-river-3_3" />
-					<Add library="proland-edit-3_3" />
+					<Add library="proland-core-4_0" />
+					<Add library="proland-terrain-4_0" />
+					<Add library="proland-graph-4_0" />
+					<Add library="proland-river-4_0" />
+					<Add library="proland-edit-4_0" />
 				</Linker>
 			</Target>
 		</Build>
