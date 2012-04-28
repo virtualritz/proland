@@ -19,12 +19,12 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3d" />
-					<Add library="proland-core-3_3d" />
-					<Add library="proland-terrain-3_3d" />
-					<Add library="proland-edit-3_3d" />
-					<Add library="proland-atmo-3_3d" />
-					<Add library="proland-ocean-3_3d" />
-					<Add library="proland-forest-3_3d" />
+					<Add library="proland-core-4_0d" />
+					<Add library="proland-terrain-4_0d" />
+					<Add library="proland-edit-4_0d" />
+					<Add library="proland-atmo-4_0d" />
+					<Add library="proland-ocean-4_0d" />
+					<Add library="proland-forest-4_0d" />
 					<Add library="tiff" />
 					<Add directory="$(#tiff.lib)" />
 					<Add directory="..\output\bin" />
@@ -44,12 +44,12 @@
 				</Compiler>
 				<Linker>
 					<Add library="ork3" />
-					<Add library="proland-core-3_3" />
-					<Add library="proland-terrain-3_3" />
-					<Add library="proland-edit-3_3" />
-					<Add library="proland-atmo-3_3" />
-					<Add library="proland-ocean-3_3" />
-					<Add library="proland-forest-3_3" />
+					<Add library="proland-core-4_0" />
+					<Add library="proland-terrain-4_0" />
+					<Add library="proland-edit-4_0" />
+					<Add library="proland-atmo-4_0" />
+					<Add library="proland-ocean-4_0" />
+					<Add library="proland-forest-4_0" />
 					<Add library="tiff" />
 					<Add directory="$(#tiff.lib)" />
 					<Add directory="..\output\bin" />

@@ -1,4 +1,4 @@
-PROLAND 3.3 - http://proland.inrialpes.fr
+PROLAND 4.0 - http://proland.inrialpes.fr
 
 A C++/OpenGL library for the real-time realistic rendering of 3D natural scenes
 
