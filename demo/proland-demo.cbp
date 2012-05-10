@@ -71,8 +71,8 @@
 			<Add option="-DSTBI_NO_WRITE" />
 			<Add directory="$(#ork3.include)" />
 			<Add directory="$(#ork3.extern)" />
-			<Add directory="$(#proland3.include)" />
 			<Add directory="$(#twbar.include)" />
+			<Add directory="..\core\sources" />
 			<Add directory="..\terrain\sources" />
 			<Add directory="..\edit\sources" />
 			<Add directory="..\atmo\sources" />
