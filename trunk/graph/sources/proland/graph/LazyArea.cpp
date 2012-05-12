@@ -17,6 +17,11 @@
  */
 
 /*
+ * Proland is distributed under a dual-license scheme.
+ * You can obtain a specific license from Inria: proland-licensing@inria.fr.
+ */
+
+/*
  * Authors: Eric Bruneton, Antoine Begault, Guillaume Piolat.
  */
 
