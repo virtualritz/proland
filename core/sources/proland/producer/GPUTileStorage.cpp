@@ -56,63 +56,63 @@ layout(triangle_strip,max_vertices=3) out;\n\
 void main() { gl_Layer = bufferLayerLevelWidth.y; gl_Position = gl_PositionIn[0]; EmitVertex(); gl_Position = gl_PositionIn[1]; EmitVertex(); gl_Position = gl_PositionIn[2]; EmitVertex(); EndPrimitive(); }\n\
 #endif\n\
 #ifdef _FRAGMENT_\n\
-uniform sampler2DArray input[8];\n\
-layout(location=0) out vec4 output;\n\
+uniform sampler2DArray input_[8];\n\
+layout(location=0) out vec4 output_;\n\
 void main() {\n\
     vec2 xy = floor(gl_FragCoord.xy);\n\
     vec4 uv = vec4(xy + vec2(0.25), xy + vec2(0.75)) / float(bufferLayerLevelWidth.w);\n\
     vec4 result;\n\
     switch (bufferLayerLevelWidth.x) {\n\
     case 0:\n\
-        result = texture(input[0], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[0], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[0], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[0], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[0], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[0], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[0], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[0], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 1:\n\
-        result = texture(input[1], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[1], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[1], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[1], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[1], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[1], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[1], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[1], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 2:\n\
-        result = texture(input[2], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[2], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[2], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[2], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[2], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[2], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[2], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[2], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 3:\n\
-        result = texture(input[3], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[3], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[3], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[3], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[3], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[3], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[3], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[3], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 4:\n\
-        result = texture(input[4], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[4], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[4], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[4], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[4], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[4], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[4], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[4], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 5:\n\
-        result = texture(input[5], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[5], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[5], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[5], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[5], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[5], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[5], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[5], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 6:\n\
-        result = texture(input[6], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[6], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[6], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[6], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[6], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[6], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[6], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[6], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     case 7:\n\
-        result = texture(input[7], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[7], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[7], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
-        result += texture(input[7], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result = texture(input_[7], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[7], vec3(uv.xw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[7], vec3(uv.zy, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
+        result += texture(input_[7], vec3(uv.zw, bufferLayerLevelWidth.y), bufferLayerLevelWidth.z);\n\
         break;\n\
     }\n\
-    output = result * 0.25;\n\
+    output_ = result * 0.25;\n\
 }\n\
 #endif\n";
 
@@ -179,7 +179,7 @@ void GPUTileStorage::init(int tileSize, int nTiles,
         ptr<Sampler> s = new Sampler(Sampler::Parameters().min(NEAREST).mag(NEAREST).wrapS(CLAMP_TO_EDGE).wrapT(CLAMP_TO_EDGE));
         for (int i = 0; i < nTextures; ++i) {
             char buf[256];
-            sprintf(buf, "input[%d]", i);
+            sprintf(buf, "input_[%d]", i);
             mipmapProg->getUniformSampler(string(buf))->set(textures[i]);
             mipmapProg->getUniformSampler(string(buf))->setSampler(s);
         }

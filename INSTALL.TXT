@@ -6,7 +6,7 @@ OpenGL 3.3.
 
 Proland also requires the following external libraries (make sure to include 
 them in your path environment variable):
-- Ork 3.1 (http://ork.gforge.inria.fr/), which itself requires
+- Ork (latest SVN version at http://ork.gforge.inria.fr/), which itself requires
   - glew-1.5.6
   - pthreads-2.8.0 (only for the task graph and scene graph frameworks)
   - glut or freeglut (only for the GlutWindow class)

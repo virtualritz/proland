@@ -51,7 +51,7 @@ void main() {\n\
 uniform vec3 sizes; // size of parent and current tiles in pixels, pass\n\
 uniform ivec4 tiles[32];\n\
 uniform sampler2DArray inputs[8];\n\
-uniform sampler2D input;\n\
+uniform sampler2D input_;\n\
 layout(location=0) out vec4 data;\n\
 void main() {\n\
     vec2 r[16];\n\
@@ -110,7 +110,7 @@ void main() {\n\
         vec4 u = min(vec4(uv.x, uv.x + 1.0, uv.x + 2.0, uv.x + 3.0), uvmax.xxxx) * viewport.z;\n\
         vec4 v = min(vec4(uv.y, uv.y + 1.0, uv.y + 2.0, uv.y + 3.0), uvmax.yyyy) * viewport.w;\n\
         for (int i = 0; i < 16; ++i) {\n\
-            r[i] = textureLod(input, vec2(u[i/4], v[i%4]), 0.0).xy;\n\
+            r[i] = textureLod(input_, vec2(u[i/4], v[i%4]), 0.0).xy;\n\
         }\n\
     }\n\
     vec2 s0 = vec2(min(r[0].x, r[1].x), max(r[0].y, r[1].y));\n\
@@ -205,7 +205,7 @@ TileSamplerZ::State::State(ptr<GPUTileStorage> storage) :
     minmaxProg = new Program(new Module(330, minmaxShader));
     viewportU = minmaxProg->getUniform4f("viewport");
     sizesU = minmaxProg->getUniform3f("sizes");
-    inputU = minmaxProg->getUniformSampler("input");
+    inputU = minmaxProg->getUniformSampler("input_");
     ptr<Sampler> s = new Sampler(Sampler::Parameters().min(NEAREST).mag(NEAREST));
     char buf[256];
     for (int i = 0; i < storage->getTextureCount(); ++i) {

@@ -59,7 +59,7 @@ in vec2 uv;\n\
 void main() {\n\
     data = texture(depthTexture, uv);\n\
 }\n\
-#endif\
+#endif\n\
 ";
 
 static_ptr<Program> ScreenParticleLayer::packer(NULL);

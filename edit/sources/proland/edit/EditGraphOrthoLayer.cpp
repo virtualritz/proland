@@ -62,11 +62,10 @@ layout (location = 0) out vec4 data;\n\
 void main() {\n\
     data = vec4(0.0, 1.0, 1.0, 1.0);\n\
 }\n\
-#endif\
+#endif\n\
 ";
 
 static_ptr<Program> EditGraphOrthoLayer::EditGraphHandler::displayPointsProgram(NULL);
-
 static_ptr<Uniform2f> EditGraphOrthoLayer::EditGraphHandler::windowSizeU(NULL);
 
 static_ptr<Mesh<vec3f, unsigned int> > EditGraphOrthoLayer::mesh(NULL);
