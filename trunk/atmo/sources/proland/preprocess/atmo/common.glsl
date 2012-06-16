@@ -63,6 +63,7 @@ const char* commonAtmoShader = "\n\
 // PHYSICAL MODEL PARAMETERS\n\
 // ----------------------------------------------------------------------------\n\
 \n\
+#ifdef _FRAGMENT_\n\
 uniform float AVERAGE_GROUND_REFLECTANCE;// = 0.1;\n\
 \n\
 // Rayleigh\n\
@@ -299,6 +300,7 @@ float phaseFunctionM(float mu) {\n\
 vec3 getMie(vec4 rayMie) { // rayMie.rgb=C*, rayMie.w=Cm,r\n\
 	return rayMie.rgb * rayMie.w / max(rayMie.r, 1e-4) * (betaR.r / betaR);\n\
 }\n\
+#endif\n\
 ";
 
 }

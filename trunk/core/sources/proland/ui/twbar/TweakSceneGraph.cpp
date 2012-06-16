@@ -96,7 +96,7 @@ void main() {\n\
         data = vec4(c.rgb * c.a + (1.0 - c.a) * backgroundColor, 1.0);\n\
     }\n\
 }\n\
-#endif\
+#endif\n\
 ";
 
 const char * selectShader = "\
@@ -113,7 +113,7 @@ layout(location=0) out vec4 data;\n\
 void main() {\n\
     data = vec4(1.0, 0.0, 0.0, 0.5);\n\
 }\n\
-#endif\
+#endif\n\
 ";
 
 int getTextureType(ptr<Texture> tex)
