@@ -39,6 +39,7 @@
 #include "proland/ui/BasicViewHandler.h"
 #include "proland/util/PlanetViewController.h"
 
+using namespace std;
 using namespace ork;
 using namespace proland;
 

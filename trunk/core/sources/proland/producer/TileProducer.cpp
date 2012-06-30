@@ -32,6 +32,8 @@
 #include "ork/core/Logger.h"
 #include "proland/producer/GPUTileStorage.h"
 
+using namespace std;
+
 namespace proland
 {
 

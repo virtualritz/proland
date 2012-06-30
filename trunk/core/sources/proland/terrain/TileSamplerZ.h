@@ -62,7 +62,7 @@ public:
      *      #setTileMap). If not NULL, must have a
      *      proland::GPUTileStorage.
      */
-    TileSamplerZ(const string &name, ptr<TileProducer> producer = NULL);
+    TileSamplerZ(const std::string &name, ptr<TileProducer> producer = NULL);
 
     /**
      * Deletes this TileSamplerZ.
@@ -86,7 +86,7 @@ protected:
      *      #setTileMap). If not NULL, must have a
      *      proland::GPUTileStorage.
      */
-    virtual void init(const string &name, ptr<TileProducer> producer = NULL);
+    virtual void init(const std::string &name, ptr<TileProducer> producer = NULL);
 
     virtual bool needTile(ptr<TerrainQuad> q);
 
@@ -131,7 +131,7 @@ private:
      * A sort operator to sort TreeZ elements. It is used to read back
      * coarsest tiles first (i.e. those whose level is minimal).
      */
-    struct TreeZSort : public less<TreeZ*>
+    struct TreeZSort : public std::less<TreeZ*>
     {
         /**
          * Returns true if x's level is less than y's level.
@@ -150,7 +150,7 @@ private:
         /**
          * The TerrainQuad(s) whose zmin and zmax values must be read back.
          */
-        vector< ptr<TerrainQuad> > targets;
+        std::vector< ptr<TerrainQuad> > targets;
 
         /**
          * True if the first element in target is the quad under the camera.
@@ -166,7 +166,7 @@ private:
          * @param camera true if the first element in target is the quad
          *      under the camera.
          */
-        TileCallback(vector< ptr<TerrainQuad> > &targets, bool camera);
+        TileCallback(std::vector< ptr<TerrainQuad> > &targets, bool camera);
 
         virtual void dataRead(volatile void *data);
     };
@@ -204,7 +204,7 @@ private:
 
         ptr<Uniform3f> sizesU;
 
-        vector< ptr<Uniform4i> > tileU;
+        std::vector< ptr<Uniform4i> > tileU;
 
         ptr<UniformSampler> inputU;
 

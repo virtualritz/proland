@@ -36,6 +36,7 @@
 
 #define HORIZON_SIZE 256
 
+using namespace std;
 using namespace ork;
 
 namespace proland

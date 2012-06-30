@@ -139,7 +139,7 @@ private:
      */
     ptr<SceneNode> scene;
 
-    map<string, TextureInfo> textures;
+    std::map<std::string, TextureInfo> textures;
 
     int currentTexture;
 

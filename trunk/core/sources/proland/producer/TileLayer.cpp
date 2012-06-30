@@ -27,6 +27,8 @@
 
 #include "proland/producer/TileLayer.h"
 
+using namespace std;
+
 namespace proland
 {
 

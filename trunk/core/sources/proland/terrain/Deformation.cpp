@@ -30,6 +30,8 @@
 #include "ork/render/Program.h"
 #include "proland/terrain/TerrainNode.h"
 
+using namespace std;
+
 namespace proland
 {
 

@@ -34,6 +34,7 @@
 #include "ork/taskgraph/TaskGraph.h"
 #include "proland/producer/CPUTileStorage.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

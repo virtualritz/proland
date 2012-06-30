@@ -70,7 +70,7 @@ public:
     OrthoProducer(ptr<TileCache> cache, ptr<TileProducer> residualTiles,
         ptr<Texture2D> orthoTexture, ptr<Texture2D> residualTexture,
         ptr<Program> upsample, vec4f rootNoiseColor, vec4f noiseColor,
-        vector<float> &noiseAmp, bool noiseHsv,
+        std::vector<float> &noiseAmp, bool noiseHsv,
         float scale, int maxLevel);
 
     /**
@@ -78,7 +78,7 @@ public:
      */
     virtual ~OrthoProducer();
 
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     virtual void setRootQuadSize(float size);
 
@@ -133,7 +133,7 @@ protected:
     void init(ptr<TileCache> cache, ptr<TileProducer> residualTiles,
         ptr<Texture2D> orthoTexture, ptr<Texture2D> residualTexture,
         ptr<Program> upsample, vec4f rootNoiseColor, vec4f noiseColor,
-        vector<float> &noiseAmp, bool noiseHsv,
+        std::vector<float> &noiseAmp, bool noiseHsv,
         float scale, int maxLevel);
 
     /**
@@ -146,7 +146,7 @@ protected:
      * @param e an optional XML element providing contextual information (such
      *      as the XML element in which the %resource descriptor was found).
      */
-    void init(ptr<ResourceManager> manager, Resource *r, const string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
+    void init(ptr<ResourceManager> manager, Resource *r, const std::string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
 
     virtual void *getContext() const;
 
@@ -179,7 +179,7 @@ private:
 
     vec4f noiseColor;
 
-    vector<float> noiseAmp;
+    std::vector<float> noiseAmp;
 
     bool noiseHsv;
 

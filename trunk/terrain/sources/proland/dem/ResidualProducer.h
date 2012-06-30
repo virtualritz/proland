@@ -107,7 +107,7 @@ protected:
      * @param e an optional XML element providing contextual information (such
      *      as the XML element in which the %resource descriptor was found).
      */
-    void init(ptr<ResourceManager> manager, Resource *r, const string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
+    void init(ptr<ResourceManager> manager, Resource *r, const std::string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
 
     /**
      * Returns the stored tile level of the first tile of size #tileSize.
@@ -142,7 +142,7 @@ private:
     /**
      * The name of the file containing the residual tiles to load.
      */
-    string name;
+    std::string name;
 
     /**
      * The size of the tiles whose level (on disk) is at least #minLevel.
@@ -224,7 +224,7 @@ private:
      * The "subproducers" providing more details in some regions.
      * Each subproducer can have its own subproducers, recursively.
      */
-    vector< ptr<ResidualProducer> > producers;
+    std::vector< ptr<ResidualProducer> > producers;
 
     /**
      * A key to store thread specific buffers used to produce the tiles.

@@ -34,6 +34,7 @@
 #include "proland/terrain/TileSampler.h"
 #include "proland/math/noise.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

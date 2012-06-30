@@ -31,6 +31,7 @@
 
 #include "proland/math/noise.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

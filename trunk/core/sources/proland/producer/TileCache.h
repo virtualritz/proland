@@ -77,13 +77,13 @@ public:
          * A tile identifier for a given producer. Contains the tile coordinates
          * level, tx, ty.
          */
-        typedef pair<int, pair<int, int> > Id;
+        typedef std::pair<int, std::pair<int, int> > Id;
 
         /**
          * A tile identifier. Contains a %producer id (first pair element) and
          * tile coordinates level,tx,ty (second pair element).
          */
-        typedef pair<int, Id> TId;
+        typedef std::pair<int, Id> TId;
 
         /**
          * The id of the %producer that manages this tile.  This local id is
@@ -333,7 +333,7 @@ protected:
     void swap(ptr<TileCache> c);
 
 private:
-    typedef map<Tile::TId, list<Tile*>::iterator> Cache;
+    typedef std::map<Tile::TId, std::list<Tile*>::iterator> Cache;
 
     /**
      * Next local identifier to be used for a TileProducer using this cache.
@@ -344,7 +344,7 @@ private:
     * The producers that use this TileCache. Maps local %producer identifiers to
     * actual producers.
     */
-    map<int, TileProducer*> producers;
+    std::map<int, TileProducer*> producers;
 
     /**
      * The storage to store the tiles data.
@@ -362,7 +362,7 @@ private:
      * and from the TileStorage, until they become unused. Maps tile identifiers
      * to actual tiles.
      */
-    map<Tile::TId, Tile*> usedTiles;
+    std::map<Tile::TId, Tile*> usedTiles;
 
     /**
      * The unused tiles. These tiles can be evicted from the cache at any
@@ -374,7 +374,7 @@ private:
     /**
      * The unused tiles, ordered by date of last use (to implement a LRU cache).
      */
-    list<Tile*> unusedTilesOrder;
+    std::list<Tile*> unusedTilesOrder;
 
     /**
      * The tasks to produce the data of deleted tiles. When an unused tile is
@@ -391,7 +391,7 @@ private:
      * problem to recreate a new Task, there will be no duplication). So the size
      * of this map cannot grow unbounded.
      */
-    map<Tile::TId, Task*> deletedTiles;
+    std::map<Tile::TId, Task*> deletedTiles;
 
     /**
      * The number of queries to this tile cache. Only used for statistics.

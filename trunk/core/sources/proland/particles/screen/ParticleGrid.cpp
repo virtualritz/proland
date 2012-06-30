@@ -29,6 +29,8 @@
 
 #include "ork/core/Logger.h"
 
+using namespace std;
+
 namespace proland
 {
 

@@ -80,7 +80,7 @@ public:
         /**
          * The id of the tile currently stored in this slot.
          */
-        pair<int, pair<int, pair<int, int> > > id;
+        std::pair<int, std::pair<int, std::pair<int, int> > > id;
 
         /**
          * The task that is responsible for producing the data for the tile
@@ -198,7 +198,7 @@ protected:
     /**
      * The currently free slots.
      */
-    list<Slot*> freeSlots;
+    std::list<Slot*> freeSlots;
 
     /**
      * Creates a new uninitialized TileStorage.

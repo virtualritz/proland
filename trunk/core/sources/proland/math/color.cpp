@@ -27,6 +27,8 @@
 
 #include "proland/math/color.h"
 
+using namespace std;
+
 namespace proland
 {
 

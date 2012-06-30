@@ -29,6 +29,8 @@
 
 #include "proland/terrain/TileSampler.h"
 
+using namespace std;
+
 namespace proland
 {
 

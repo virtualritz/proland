@@ -30,6 +30,7 @@
 #include "ork/render/FrameBuffer.h"
 #include "proland/terrain/TerrainNode.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

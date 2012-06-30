@@ -27,6 +27,8 @@
 
 #include "proland/util/PlanetViewController.h"
 
+using namespace std;
+
 namespace proland
 {
 

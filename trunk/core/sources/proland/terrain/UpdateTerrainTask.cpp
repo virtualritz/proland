@@ -30,6 +30,8 @@
 #include "ork/resource/ResourceTemplate.h"
 #include "ork/taskgraph/TaskGraph.h"
 
+using namespace std;
+
 namespace proland
 {
 

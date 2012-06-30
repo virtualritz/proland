@@ -117,12 +117,12 @@ private:
     /**
      * The residual tiles that have been modified.
      */
-    map<TileCache::Tile::Id, float*> modifiedTiles;
+    std::map<TileCache::Tile::Id, float*> modifiedTiles;
 
     /**
      * The elevation deltas from which to recompute the residual tiles.
      */
-    map<TileCache::Tile::Id, float*> deltaElevations;
+    std::map<TileCache::Tile::Id, float*> deltaElevations;
 
     /**
      * Returns the elevation delta at the given location.

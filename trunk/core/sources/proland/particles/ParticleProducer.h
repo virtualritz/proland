@@ -134,7 +134,7 @@ public:
      *
      * @param[out] producers the tile producers used by this ParticleProducer.
      */
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     /**
      * Returns the size in bytes of the data that must be stored for each
@@ -233,7 +233,7 @@ private:
     /**
      * The ParticleLayer associated with this %producer.
      */
-    vector< ptr<ParticleLayer> > layers;
+    std::vector< ptr<ParticleLayer> > layers;
 
     /**
      * The size of the #params array.

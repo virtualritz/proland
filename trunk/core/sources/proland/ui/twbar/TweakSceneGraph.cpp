@@ -34,6 +34,7 @@
 #include "proland/particles/ParticleProducer.h"
 #include "proland/ui/SceneVisitor.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

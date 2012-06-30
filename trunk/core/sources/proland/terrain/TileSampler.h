@@ -73,7 +73,7 @@ public:
      *      #setTileMap). If not NULL, must have a
      *      proland::GPUTileStorage.
      */
-    TileSampler(const string &name, ptr<TileProducer> producer = NULL);
+    TileSampler(const std::string &name, ptr<TileProducer> producer = NULL);
 
     /**
      * Deletes this TileSampler.
@@ -274,7 +274,7 @@ protected:
      *      #setTileMap). If not NULL, must have a
      *      proland::GPUTileStorage.
      */
-    virtual void init(const string &name, ptr<TileProducer> producer = NULL);
+    virtual void init(const std::string &name, ptr<TileProducer> producer = NULL);
 
     /**
      * Returns true if a tile is needed for the given terrain quad.
@@ -324,7 +324,7 @@ protected:
     virtual void swap(ptr<TileSampler> p);
 
 private:
-    string name;
+    std::string name;
 
     /**
      * The %producer to be used to create texture tiles for newly created quads.
@@ -334,7 +334,7 @@ private:
     /**
      * The terrains associated with this uniform. Only used with #setTileMap.
      */
-    vector< ptr<TerrainNode> > terrains;
+    std::vector< ptr<TerrainNode> > terrains;
 
     /**
      * Last used GLSL program. Updated each time #setTile or #setTileMap is called with a
@@ -378,7 +378,7 @@ private:
      * The current camera position in local space for each %terrain associated
      * with this uniform (only used with #setTileMap).
      */
-    vector< ptr<Uniform4f> > cameraU;
+    std::vector< ptr<Uniform4f> > cameraU;
 
     /**
      * True to store texture tiles for leaf quads.
@@ -400,7 +400,7 @@ private:
      * for a given quad. A texture is stored if at least one filter returns
      * true.
      */
-    vector<TileFilter*> storeFilters;
+    std::vector<TileFilter*> storeFilters;
 
     /**
      * True if tiles must be loaded in an asynchronous way, using prefetching.

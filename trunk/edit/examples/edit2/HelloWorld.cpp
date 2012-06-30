@@ -196,7 +196,7 @@ protected:
 class HelloWorldResource : public ResourceTemplate<100, HelloWorld>
 {
 public:
-    HelloWorldResource(ptr<ResourceManager> manager, const string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL) :
+    HelloWorldResource(ptr<ResourceManager> manager, const std::string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL) :
         ResourceTemplate<100, HelloWorld> (manager, name, desc)
     {
         e = e == NULL ? desc->descriptor : e;

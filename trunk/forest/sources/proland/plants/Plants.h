@@ -164,7 +164,7 @@ private:
 
     float maxDistance;
 
-    vector< ptr<MeshBuffers> > patterns;
+    std::vector< ptr<MeshBuffers> > patterns;
 };
 
 }

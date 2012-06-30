@@ -31,6 +31,7 @@
 #include "ork/render/FrameBuffer.h"
 #include "ork/scenegraph/SceneManager.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

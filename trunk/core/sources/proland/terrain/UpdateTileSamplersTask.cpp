@@ -30,6 +30,8 @@
 #include "ork/resource/ResourceTemplate.h"
 #include "proland/terrain/TileSampler.h"
 
+using namespace std;
+
 namespace proland
 {
 

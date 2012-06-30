@@ -115,7 +115,7 @@ public:
      *
      * @param[out] producers the tile producers used by this ParticleLayer.
      */
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const
     {
     }
 

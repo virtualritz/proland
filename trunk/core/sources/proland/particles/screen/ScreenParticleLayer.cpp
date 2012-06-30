@@ -35,6 +35,7 @@
 #include "proland/particles/screen/ParticleGrid.h"
 #include "proland/particles/terrain/TerrainParticleLayer.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland
