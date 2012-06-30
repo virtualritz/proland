@@ -594,6 +594,11 @@ public:
         trailer[4] = 1;
         fwrite(trailer, 5*sizeof(int), 1, f);
         fclose(f);
+
+        delete[] kc;
+        delete[] ao;
+        delete[] gc;
+        delete[] gao;
     }
 
     static void exit() {
