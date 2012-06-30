@@ -124,10 +124,10 @@ void HeightMipmap::generate(int rootLevel, int rootTx, int rootTy, float scale, 
         }
         fseek(f, sizeof(int) * 6 + sizeof(float), SEEK_SET);
         fwrite(offsets, sizeof(int) * nTiles * 2, 1, f);
+        delete[] offsets;
         fclose(f);
     }
 }
-
 unsigned char* HeightMipmap::readTile(int tx, int ty)
 {
     char buf[256];
