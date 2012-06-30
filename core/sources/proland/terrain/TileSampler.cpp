@@ -31,6 +31,7 @@
 #include "proland/producer/GPUTileStorage.h"
 #include "proland/terrain/TerrainNode.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

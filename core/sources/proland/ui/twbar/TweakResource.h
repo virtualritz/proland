@@ -72,7 +72,7 @@ public:
      * @param e an XML description of the controls that must be provided by
      *      this TweakResource.
      */
-    TweakResource(string name, ptr<ResourceManager> manager, const TiXmlElement *e);
+    TweakResource(std::string name, ptr<ResourceManager> manager, const TiXmlElement *e);
 
     /**
      * Deletes this TweakResource.
@@ -91,7 +91,7 @@ protected:
      * Initializes this TweakResource.
      * See #TweakResource.
      */
-    void init(string name, ptr<ResourceManager> manager, const TiXmlElement *e);
+    void init(std::string name, ptr<ResourceManager> manager, const TiXmlElement *e);
 
     void swap(ptr<TweakResource> p);
 
@@ -110,7 +110,7 @@ private:
     /**
      * The tweak bar data managed by this TweakResource.
      */
-    vector<Data*> datas;
+    std::vector<Data*> datas;
 
     void clearData();
 

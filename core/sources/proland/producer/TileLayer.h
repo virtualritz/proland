@@ -134,7 +134,7 @@ public:
      *
      * @param[out] producers the tile producers used by this TileLayer.
      */
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     /**
      * Sets the tile size value.

@@ -133,7 +133,7 @@ public:
      *
      * @param infos each flow producer mapped to its SceneNode.
      */
-    TerrainParticleLayer(map<ptr<TileProducer>, TerrainInfo *> infos);
+    TerrainParticleLayer(std::map<ptr<TileProducer>, TerrainInfo *> infos);
 
     /**
      * Deletes this LifeCycleParticleLayer.
@@ -150,12 +150,12 @@ public:
         return (TerrainParticle*) getParticleData(p);
     }
 
-    inline map<ptr<TileProducer>, TerrainInfo *> getTerrainInfos()
+    inline std::map<ptr<TileProducer>, TerrainInfo *> getTerrainInfos()
     {
         return infos;
     }
 
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     virtual void moveParticles(double dt);
 
@@ -168,7 +168,7 @@ protected:
     /**
      * Initializes this TerrainParticleLayer. See #TerrainParticleLayer.
      */
-    void init(map<ptr<TileProducer>, TerrainInfo *> infos);
+    void init(std::map<ptr<TileProducer>, TerrainInfo *> infos);
 
     virtual void initialize();
 
@@ -198,7 +198,7 @@ protected:
     /**
      * Each flow producer mapped to its SceneNode.
      */
-    map<ptr<TileProducer>, TerrainInfo*> infos;
+    std::map<ptr<TileProducer>, TerrainInfo*> infos;
 
 private:
     /**

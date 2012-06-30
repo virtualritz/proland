@@ -31,6 +31,8 @@
 
 #include "proland/terrain/TerrainNode.h"
 
+using namespace std;
+
 namespace proland
 {
 

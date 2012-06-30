@@ -29,6 +29,7 @@
 
 #include "ork/resource/ResourceTemplate.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

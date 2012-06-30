@@ -33,6 +33,7 @@
 #include "ork/resource/ResourceTemplate.h"
 #include "ork/scenegraph/SceneNode.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

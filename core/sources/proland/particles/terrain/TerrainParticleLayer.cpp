@@ -30,6 +30,7 @@
 #include "ork/resource/ResourceTemplate.h"
 #include "proland/producer/ObjectTileStorage.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

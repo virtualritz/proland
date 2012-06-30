@@ -86,7 +86,7 @@ public:
      */
     virtual ~OrthoGPUProducer();
 
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     virtual void setRootQuadSize(float size);
 

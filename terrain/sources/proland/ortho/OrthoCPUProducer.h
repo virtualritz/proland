@@ -100,7 +100,7 @@ private:
     /**
      * The name of the file containing the residual tiles to load.
      */
-    string name;
+    std::string name;
 
     /**
      * The number of components per pixel in the tiles to load.

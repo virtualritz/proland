@@ -55,7 +55,7 @@ public:
      * @param waveLength size of a wave.
      * @param timeLoop number of frames of a wave cycle.
      */
-    WaveTile(string &name, ptr<Texture2D> tex, int gridSize, int tileSize, float waveLength, int timeLoop);
+    WaveTile(std::string &name, ptr<Texture2D> tex, int gridSize, int tileSize, float waveLength, int timeLoop);
 
     /**
      * Deletes this WaveTile.
@@ -94,12 +94,12 @@ protected:
      * @param waveLength size of a wave.
      * @param timeLoop number of frames of a wave cycle.
      */
-    virtual void init(string &name, ptr<Texture2D> tex, int gridSize, int tileSize, float waveLength, int timeLoop);
+    virtual void init(std::string &name, ptr<Texture2D> tex, int gridSize, int tileSize, float waveLength, int timeLoop);
 
     /**
      * Current wave tile's name.
      */
-    string name;
+    std::string name;
 
     /**
      * The Texture2D that contains the wave profiles.

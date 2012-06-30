@@ -81,6 +81,7 @@
 #include "proland/preprocess/atmo/irradianceN.glsl"
 #include "proland/preprocess/atmo/transmittance.glsl"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

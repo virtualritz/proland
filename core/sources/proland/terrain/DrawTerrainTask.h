@@ -176,7 +176,7 @@ private:
          * @param q the %terrain quadtree to be drawn.
          * @param uniforms the TileSampler associated with the %terrain.
          */
-        void findDrawableQuads(ptr<TerrainQuad> q, const vector< ptr<TileSampler> > &uniforms);
+        void findDrawableQuads(ptr<TerrainQuad> q, const std::vector< ptr<TileSampler> > &uniforms);
 
         /**
          * Draw the mesh #m for the leaf quads of the given quadtree. Before drawing each
@@ -186,7 +186,7 @@ private:
          * @param q the %terrain quadtree to be drawn.
          * @param uniforms the TileSampler associated with the %terrain.
          */
-        void drawQuad(ptr<TerrainQuad> q, const vector< ptr<TileSampler> > &uniforms);
+        void drawQuad(ptr<TerrainQuad> q, const std::vector< ptr<TileSampler> > &uniforms);
     };
 };
 

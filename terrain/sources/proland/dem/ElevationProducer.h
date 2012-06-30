@@ -95,14 +95,14 @@ public:
     ElevationProducer(ptr<TileCache> cache, ptr<TileProducer> residualTiles,
         ptr<Texture2D> demTexture, ptr<Texture2D> layerTexture, ptr<Texture2D> residualTexture,
         ptr<Program> upsample, ptr<Program> blend, int gridMeshSize,
-        vector<float> &noiseAmp, bool flipDiagonals = false);
+        std::vector<float> &noiseAmp, bool flipDiagonals = false);
 
     /**
      * Deletes this ElevationProducer.
      */
     virtual ~ElevationProducer();
 
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     virtual void setRootQuadSize(float size);
 
@@ -166,7 +166,7 @@ protected:
     void init(ptr<TileCache> cache, ptr<TileProducer> residualTiles,
         ptr<Texture2D> demTexture, ptr<Texture2D> layerTexture, ptr<Texture2D> residualTexture,
         ptr<Program> upsample, ptr<Program> blend, int gridMeshSize,
-        vector<float> &noiseAmp, bool flipDiagonals = false);
+        std::vector<float> &noiseAmp, bool flipDiagonals = false);
 
     /**
      * Initializes this ElevationProducer from a Resource.
@@ -178,7 +178,7 @@ protected:
      * @param e an optional XML element providing contextual information (such
      *      as the XML element in which the %resource descriptor was found).
      */
-    void init(ptr<ResourceManager> manager, Resource *r, const string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
+    void init(ptr<ResourceManager> manager, Resource *r, const std::string &name, ptr<ResourceDescriptor> desc, const TiXmlElement *e = NULL);
 
     virtual void *getContext() const;
 
@@ -198,7 +198,7 @@ private:
     /**
      * The amplitude of the noise to be added for each level (one amplitude per level).
      */
-    vector<float> noiseAmp;
+    std::vector<float> noiseAmp;
 
     /**
      * A buffer to convert a residual tile produced by #residualTiles to the

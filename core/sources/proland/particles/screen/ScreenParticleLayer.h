@@ -303,7 +303,7 @@ private:
      *
      * @param particles a list of %particles.
      */
-    void getParticleDepths(const vector<ScreenParticle*> &particles);
+    void getParticleDepths(const std::vector<ScreenParticle*> &particles);
 };
 
 }

@@ -41,6 +41,7 @@
 #include "proland/producer/CPUTileStorage.h"
 #include "proland/producer/GPUTileStorage.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

@@ -109,7 +109,7 @@ public:
      */
     virtual ~TextureLayer();
 
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     void useTile(int level, int tx, int ty, unsigned int deadline);
 

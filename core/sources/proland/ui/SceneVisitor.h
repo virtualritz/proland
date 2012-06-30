@@ -100,7 +100,7 @@ public:
      * @param name the field's name.
      * @param field the field's value.
      */
-    virtual ptr<SceneVisitor> visitNodeField(string &name, ptr<Object> field);
+    virtual ptr<SceneVisitor> visitNodeField(std::string &name, ptr<Object> field);
 
     /**
      * Visits a Method.
@@ -109,7 +109,7 @@ public:
      * @param name the Method's name.
      * @param method the Method to visit.
      */
-    virtual ptr<SceneVisitor> visitNodeMethod(string &name, ptr<Method> method);
+    virtual ptr<SceneVisitor> visitNodeMethod(std::string &name, ptr<Method> method);
 
     /**
      * Visits a TileCache.
@@ -142,7 +142,7 @@ private:
      * @param n the SceneNode to visit.
      * @param[in,out] caches the TileCache found during this visit.
      */
-    void accept(ptr<SceneNode> n, set< ptr<TileCache> > &caches);
+    void accept(ptr<SceneNode> n, std::set< ptr<TileCache> > &caches);
 
     /**
      * Makes this visitor visit the given tile producer, and all its
@@ -151,7 +151,7 @@ private:
      * @param p the TileProducer to visit.
      * @param[in,out] caches the TileCache found during this visit.
      */
-    void accept(ptr<TileProducer> p, set< ptr<TileCache> > &caches);
+    void accept(ptr<TileProducer> p, std::set< ptr<TileCache> > &caches);
 
     /**
      * Makes this visitor visit the given tile layer, and all its
@@ -160,7 +160,7 @@ private:
      * @param l the TileLayer to visit.
      * @param[in,out] caches the TileCache found during this visit.
      */
-    void accept(ptr<TileLayer> l, set< ptr<TileCache> > &caches);
+    void accept(ptr<TileLayer> l, std::set< ptr<TileCache> > &caches);
 };
 
 }

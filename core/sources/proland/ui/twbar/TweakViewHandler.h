@@ -83,7 +83,7 @@ public:
      *      move instantly to them.
      * @param active true if this TweakBarHandler must be initialy active.
      */
-    TweakViewHandler(ptr<BasicViewHandler> viewHandler, const vector<Position> &views, bool animate, bool active);
+    TweakViewHandler(ptr<BasicViewHandler> viewHandler, const std::vector<Position> &views, bool animate, bool active);
 
     /**
      * Deletes this TweakViewHandler.
@@ -100,7 +100,7 @@ protected:
      * Initializes this TweakViewHandler.
      * See #TweakViewHandler.
      */
-    virtual void init(ptr<BasicViewHandler> viewHandler, const vector<Position> &views, bool animate, bool active);
+    virtual void init(ptr<BasicViewHandler> viewHandler, const std::vector<Position> &views, bool animate, bool active);
 
     virtual void updateBar(TwBar *bar);
 
@@ -115,7 +115,7 @@ private:
     /**
      * A list of predefined positions with names and shortcut keys.
      */
-    vector<Position> views;
+    std::vector<Position> views;
 
     /**
      * True to go smoothly to target positions, false to move instantly to

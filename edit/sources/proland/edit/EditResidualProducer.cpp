@@ -31,6 +31,7 @@
 #include "ork/resource/ResourceTemplate.h"
 #include "proland/producer/CPUTileStorage.h"
 
+using namespace std;
 using namespace ork;
 
 namespace proland

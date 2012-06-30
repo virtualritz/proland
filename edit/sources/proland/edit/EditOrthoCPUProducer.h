@@ -130,12 +130,12 @@ private:
     /**
      * The color residual tiles that have been modified.
      */
-    map<TileCache::Tile::Id, unsigned char*> modifiedTiles;
+    std::map<TileCache::Tile::Id, unsigned char*> modifiedTiles;
 
     /**
      * The color deltas from which to recompute the color residual tiles.
      */
-    map<TileCache::Tile::Id, int*> deltaColors;
+    std::map<TileCache::Tile::Id, int*> deltaColors;
 
     /**
      * Returns the color delta at the given location.

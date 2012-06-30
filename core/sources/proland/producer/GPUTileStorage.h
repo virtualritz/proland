@@ -204,7 +204,7 @@ private:
     /**
      * The storage textures used to store the tiles.
      */
-    vector< ptr<Texture2DArray> > textures;
+    std::vector< ptr<Texture2DArray> > textures;
 
     /**
      * True if the storage texture format needs mipmaping.
@@ -220,7 +220,7 @@ private:
     /**
      * The slots whose mipmap levels are not up to date (one set per texture).
      */
-    set<GPUSlot*> *dirtySlots;
+    std::set<GPUSlot*> *dirtySlots;
 
     /**
      * Framebuffer used to generate mipmaps.

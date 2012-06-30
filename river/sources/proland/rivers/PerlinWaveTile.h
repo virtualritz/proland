@@ -47,7 +47,7 @@ public:
      * Creates a new PerlinWaveTile.
      * See WaveTile#WaveTile().
      */
-    PerlinWaveTile(string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
+    PerlinWaveTile(std::string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
 
     /**
      * Deletes this PerlinWaveTile.
@@ -107,7 +107,7 @@ protected:
      * Initializes the fields of a PerlinWaveTile.
      * See WaveTile#init().
      */
-    virtual void init(string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
+    virtual void init(std::string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
 
     virtual void swap(ptr<PerlinWaveTile> t);
 };

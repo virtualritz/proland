@@ -47,7 +47,7 @@ public:
      * Creates a new AnimatedPerlinWaveTile.
      * See WaveTile#WaveTile().
      */
-    AnimatedPerlinWaveTile(string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
+    AnimatedPerlinWaveTile(std::string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
 
     /**
      * Deletes an AnimatedPerlinWaveTile.
@@ -112,14 +112,14 @@ protected:
      * Initializes the fields of a AnimatedPerlinWaveTile.
      * See WaveTile#init().
      */
-    virtual void init(string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
+    virtual void init(std::string &name, int tileSize, int gridSize, float waveLength, int timeLoop);
 
     virtual void swap(ptr<AnimatedPerlinWaveTile> t);
 
     /**
      * Contains the textures used to animate the wave profile.
      */
-    vector<ptr<Texture2D> > tex;
+    std::vector<ptr<Texture2D> > tex;
 };
 
 }

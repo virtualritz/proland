@@ -104,7 +104,7 @@ public:
      * @param components how many components of format f must be stored per
      *      particle in this GPU storage.
      */
-    void initGpuStorage(const string &name, TextureInternalFormat f, int components);
+    void initGpuStorage(const std::string &name, TextureInternalFormat f, int components);
 
     /**
      * Returns the maximum number of %particles that can be stored in this
@@ -123,7 +123,7 @@ public:
      * @param name a gpu storage symbolic name (see #initGpuStorage()).
      * @return the GPU buffer corresponding to this GPU storage.
      */
-    ptr<TextureBuffer> getGpuStorage(const string &name);
+    ptr<TextureBuffer> getGpuStorage(const std::string &name);
 
     /**
      * Returns the current number of %particles stored in this storage.
@@ -142,12 +142,12 @@ public:
      *
      * @return the list of %particles currently stored in this storage.
      */
-    vector<Particle*>::iterator getParticles();
+    std::vector<Particle*>::iterator getParticles();
 
     /**
      * Returns an iterator just past the last stored particle.
      */
-    inline vector<Particle*>::iterator end()
+    inline std::vector<Particle*>::iterator end()
     {
         return freeAndAllocatedParticles.end();
     }
@@ -221,7 +221,7 @@ private:
      * The %particles data on GPU, in the form of texture buffers.
      * See #initGPUStorage().
      */
-    map<string, ptr<TextureBuffer> > gpuTextures;
+    std::map<std::string, ptr<TextureBuffer> > gpuTextures;
 
     /**
      * Pointers to the free and allocated %particles in #particles. This vector
@@ -230,7 +230,7 @@ private:
      * #pack is true). The remaining elements contain pointers to the
      * currently allocated particles.
      */
-    vector<Particle*> freeAndAllocatedParticles;
+    std::vector<Particle*> freeAndAllocatedParticles;
 
     /**
      * True to ensure that new %particles are always created with the minimum

@@ -254,7 +254,7 @@ public:
      *
      * @param[out] producers the tile producers used by this TileProducer.
      */
-    virtual void getReferencedProducers(vector< ptr<TileProducer> > &producers) const;
+    virtual void getReferencedProducers(std::vector< ptr<TileProducer> > &producers) const;
 
     /**
      * Returns the number of layers of this producer.
@@ -400,12 +400,12 @@ private:
     /**
      * The list of all the Layers used by this %producer.
      */
-    vector< ptr<TileLayer> > layers;
+    std::vector< ptr<TileLayer> > layers;
 
     /**
      * The list of all the Tasks created by this %producer.
      */
-    vector<Task*> tasks;
+    std::vector<Task*> tasks;
 
     /**
      * The type of the Task that produce the actual tile data.
