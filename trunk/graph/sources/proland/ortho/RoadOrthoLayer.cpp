@@ -199,7 +199,6 @@ bool RoadOrthoLayer::doCreateTile(int level, int tx, int ty, TileStorage::Slot *
                 }
             }
             colorU->set(color);
-            stripeSizeU->set(vec3f(0.f, 0.f, -1.f));
             ci = g->getCurves();
             while (ci->hasNext()) { // Drawing road ends & stripes
                 CurvePtr p = ci->next();
@@ -224,8 +223,8 @@ bool RoadOrthoLayer::doCreateTile(int level, int tx, int ty, TileStorage::Slot *
                         l0 *= f0;
                         l1 *= f1;
                     }
+                    stripeSizeU->set(vec3f(0.f, 0.f, -1.f));
                     drawCurve(tileOffset, p, d, l0, d->getCurvilinearLength() - l1, pwidth, scale2, fb, layerProgram, *meshuv, &nx, &ny, &lx, &ly);
-                    stripeSizeU->set(vec3f(0.f, 1.f, -1.f));
                     if (l0 != 0 && swidth > 4) {
                         drawRoadEnd(tileOffset, fb, a, na, na.length(), pwidth / 2, scale2, &nx, &ny, &lx, &ly);
                     }
@@ -302,7 +301,6 @@ void RoadOrthoLayer::drawRoadEnd(const vec3d &tileOffset, ptr<FrameBuffer> fb, c
     }
     fb->draw(layerProgram, *meshuv);
     colorU->set(color);
-    stripeSizeU->set(vec3f(0.f, 0.f, -1.f));
 }
 
 float RoadOrthoLayer::getLengthWithoutStripes(CurvePtr p, CurveData *data, bool start)

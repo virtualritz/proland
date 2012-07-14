@@ -93,6 +93,7 @@
 		<Unit filename="archives\earth\earth-srtm-clouds.xml" />
 		<Unit filename="archives\earth\earth-srtm-editAll-async.xml" />
 		<Unit filename="archives\earth\earth-srtm-editAll.xml" />
+		<Unit filename="archives\earth\earth-srtm-roads.xml" />
 		<Unit filename="archives\earth\earth-srtm-trees2D.xml" />
 		<Unit filename="archives\earth\earth-srtm-trees3D.xml" />
 		<Unit filename="archives\earth\earth-srtm.xml" />
