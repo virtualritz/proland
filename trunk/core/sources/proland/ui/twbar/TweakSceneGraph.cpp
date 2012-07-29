@@ -135,137 +135,137 @@ int getTextureType(ptr<Texture> tex)
     return -1;
 }
 
-TW_CALL void getUniformState(void *value, void *clientData)
+void TW_CALL getUniformState(void *value, void *clientData)
 {
     *(bool*) value = ((TileSampler*) clientData)->getAsync();
 }
 
-TW_CALL void setUniformState(const void *value, void *clientData)
+void TW_CALL setUniformState(const void *value, void *clientData)
 {
     ((TileSampler*) clientData)->setAsynchronous(*(bool*) value);
 }
 
-TW_CALL void invalidateTiles(void *clientData)
+void TW_CALL invalidateTiles(void *clientData)
 {
     ((TileProducer*) clientData)->invalidateTiles();
 }
 
-TW_CALL void getLayerState(void *value, void *clientData)
+void TW_CALL getLayerState(void *value, void *clientData)
 {
     *(bool*) value = ((TileLayer*) clientData)->isEnabled();
 }
 
-TW_CALL void setLayerState(const void *value, void *clientData)
+void TW_CALL setLayerState(const void *value, void *clientData)
 {
     ((TileLayer*) clientData)->setIsEnabled(*(bool*) value);
 }
 
-TW_CALL void getParticleLayerState(void *value, void *clientData)
+void TW_CALL getParticleLayerState(void *value, void *clientData)
 {
     *(bool*) value = ((ParticleLayer*) clientData)->isEnabled();
 }
 
-TW_CALL void setParticleLayerState(const void *value, void *clientData)
+void TW_CALL setParticleLayerState(const void *value, void *clientData)
 {
     ((ParticleLayer*) clientData)->setIsEnabled(*(bool*) value);
 }
 
-TW_CALL void getMethodState(void *value, void *clientData)
+void TW_CALL getMethodState(void *value, void *clientData)
 {
     *(bool*) value = ((Method*) clientData)->isEnabled();
 }
 
-TW_CALL void setMethodState(const void *value, void *clientData)
+void TW_CALL setMethodState(const void *value, void *clientData)
 {
     ((Method*) clientData)->setIsEnabled(*(bool*) value);
 }
 
-TW_CALL void getUsedTiles(void *value, void *clientData)
+void TW_CALL getUsedTiles(void *value, void *clientData)
 {
     *(int*) value = ((TileCache*) clientData)->getUsedTiles();
 }
 
-TW_CALL void getUnusedTiles(void *value, void *clientData)
+void TW_CALL getUnusedTiles(void *value, void *clientData)
 {
     *(int*) value = ((TileCache*) clientData)->getUnusedTiles();
 }
 
-TW_CALL void GetCurrentTexCallback(void *value, void *clientData)
+void TW_CALL GetCurrentTexCallback(void *value, void *clientData)
 {
     *static_cast<int*>(value) = static_cast<TweakSceneGraph*>(clientData)->getCurrentTexture();
 }
 
-TW_CALL void SetCurrentTexCallback(const void *value, void *clientData)
+void TW_CALL SetCurrentTexCallback(const void *value, void *clientData)
 {
     static_cast<TweakSceneGraph*>(clientData)->setCurrentTexture(*static_cast<const int*>(value));
 }
 
-TW_CALL void GetLevelCallback(void *value, void *clientData)
+void TW_CALL GetLevelCallback(void *value, void *clientData)
 {
     *static_cast<int*>(value) = static_cast<TweakSceneGraph*>(clientData)->getCurrentLevel();
 }
 
-TW_CALL void SetLevelCallback(const void *value, void *clientData)
+void TW_CALL SetLevelCallback(const void *value, void *clientData)
 {
     static_cast<TweakSceneGraph*>(clientData)->setCurrentLevel(*static_cast<const int*>(value));
 }
 
-TW_CALL void GetModeCallback(void *value, void *clientData)
+void TW_CALL GetModeCallback(void *value, void *clientData)
 {
     *static_cast<int*>(value) = static_cast<TweakSceneGraph*>(clientData)->getCurrentMode();
 }
 
-TW_CALL void SetModeCallback(const void *value, void *clientData)
+void TW_CALL SetModeCallback(const void *value, void *clientData)
 {
     static_cast<TweakSceneGraph*>(clientData)->setCurrentMode(*static_cast<const int*>(value));
 }
 
-TW_CALL void GetNormXCallback(void *value, void *clientData)
+void TW_CALL GetNormXCallback(void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     *static_cast<float*>(value) = v.x;
 }
 
-TW_CALL void SetNormXCallback(const void *value, void *clientData)
+void TW_CALL SetNormXCallback(const void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     v.x = *static_cast<const float*>(value);
     static_cast<TweakSceneGraph*>(clientData)->setCurrentNorm(v);
 }
 
-TW_CALL void GetNormYCallback(void *value, void *clientData)
+void TW_CALL GetNormYCallback(void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     *static_cast<float*>(value) = v.y;
 }
 
-TW_CALL void SetNormYCallback(const void *value, void *clientData)
+void TW_CALL SetNormYCallback(const void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     v.y = *static_cast<const float*>(value);
     static_cast<TweakSceneGraph*>(clientData)->setCurrentNorm(v);
 }
 
-TW_CALL void GetNormZCallback(void *value, void *clientData)
+void TW_CALL GetNormZCallback(void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     *static_cast<float*>(value) = v.z;
 }
 
-TW_CALL void SetNormZCallback(const void *value, void *clientData)
+void TW_CALL SetNormZCallback(const void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     v.z = *static_cast<const float*>(value);
     static_cast<TweakSceneGraph*>(clientData)->setCurrentNorm(v);
 }
 
-TW_CALL void GetNormWCallback(void *value, void *clientData)
+void TW_CALL GetNormWCallback(void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     *static_cast<float*>(value) = v.w;
 }
 
-TW_CALL void SetNormWCallback(const void *value, void *clientData)
+void TW_CALL SetNormWCallback(const void *value, void *clientData)
 {
     vec4f v = static_cast<TweakSceneGraph*>(clientData)->getCurrentNorm();
     v.w = *static_cast<const float*>(value);
@@ -624,14 +624,14 @@ void TweakSceneGraph::redisplay(double t, double dt, bool &needUpdate)
                 break;
             case 2:
                 l = currentInfo->tex.cast<Texture2DArray>()->getLayers();
-                w = (int) sqrt(l);
+                w = (int) sqrt(float(l));
                 h = l % w == 0 ? l / w : l / w + 1;
                 renderTexture2DArrayU->set(currentInfo->tex);
                 renderGridU->set(vec3i(w, h, l));
                 break;
             case 3:
                 l = currentInfo->tex.cast<Texture3D>()->getDepth();
-                w = (int) sqrt(l);
+                w = (int) sqrt(float(l));
                 h = l % w == 0 ? l / w : l / w + 1;
                 renderTexture3DU->set(currentInfo->tex);
                 renderGridU->set(vec3i(w, h, l));

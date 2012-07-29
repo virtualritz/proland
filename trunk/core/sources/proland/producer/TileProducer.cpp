@@ -30,6 +30,7 @@
 #include "proland/producer/TileProducer.h"
 
 #include "ork/core/Logger.h"
+#include "ork/scenegraph/SceneManager.h"
 #include "proland/producer/GPUTileStorage.h"
 
 using namespace std;
