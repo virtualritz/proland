@@ -179,7 +179,7 @@ public:
                 int view = i * (1 - abs(i)) + j + 2 * n * i + n * (n + 1);
                 assert(view == current);
                 current++;
-                fprintf(f, "    <uniformMatrix3 name=\"views[%d]\" value=\"%f,%f,%f,%f,%f,%f,%f,%f,%f\"/>\n",
+                fprintf(f, "    <uniformMatrix3f name=\"views[%d]\" value=\"%f,%f,%f,%f,%f,%f,%f,%f,%f\"/>\n",
                        view,
                        w2s[0][0], w2s[0][1], w2s[0][2],
                        w2s[1][0], w2s[1][1], w2s[1][2],
