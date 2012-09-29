@@ -227,7 +227,7 @@ void DrawPlantsShadowTask::drawPlantsShadow(ptr<SceneNode> context)
 
         double zLimits[MAX_SHADOW_MAPS + 1];
         double zCuts[MAX_SHADOW_MAPS + 1];
-        bool zSlice[MAX_SHADOW_MAPS];
+        bool zSlice[MAX_SHADOW_MAPS + 1];
         for (int slice = 0; slice <= MAX_SHADOW_MAPS; ++slice) {
             zLimits[slice] = -1.0;
             zCuts[slice] = -1.0;
