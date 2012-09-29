@@ -11,7 +11,6 @@
 				<Option object_output="..\build\Debug\" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option createStaticLib="0" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-mthreads" />
@@ -28,7 +27,6 @@
 				<Option object_output="..\build\Release\" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option createStaticLib="0" />
 				<Compiler>
 					<Add option="-mthreads" />
 					<Add option="-fno-strict-aliasing" />
@@ -81,6 +79,20 @@
 		<Unit filename="sources\proland\plants\Plants.h" />
 		<Unit filename="sources\proland\plants\PlantsProducer.cpp" />
 		<Unit filename="sources\proland\plants\PlantsProducer.h" />
+		<Unit filename="sources\proland\preprocess\trees\PreprocessTree.cpp" />
+		<Unit filename="sources\proland\preprocess\trees\PreprocessTree.h" />
+		<Unit filename="sources\proland\preprocess\trees\PreprocessTreeTables.cpp" />
+		<Unit filename="sources\proland\preprocess\trees\drawPlantsMethod.xml" />
+		<Unit filename="sources\proland\preprocess\trees\drawPlantsShadowMethod.xml" />
+		<Unit filename="sources\proland\preprocess\trees\globalsShader.glhl" />
+		<Unit filename="sources\proland\preprocess\trees\globalsShader.glsl" />
+		<Unit filename="sources\proland\preprocess\trees\helloworld.xml" />
+		<Unit filename="sources\proland\preprocess\trees\quad.mesh" />
+		<Unit filename="sources\proland\preprocess\trees\renderTreeShader3D.glsl" />
+		<Unit filename="sources\proland\preprocess\trees\renderTreeShadow3D.glsl" />
+		<Unit filename="sources\proland\preprocess\trees\selectTreeShader.glsl" />
+		<Unit filename="sources\proland\preprocess\trees\terrainShader.glsl" />
+		<Unit filename="sources\proland\preprocess\trees\treeInfo3D.glsl" />
 		<Extensions>
 			<code_completion />
 			<envvars />
