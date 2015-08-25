@@ -10,9 +10,7 @@ Proland is a RESEARCH PROTOTYPE, not a commercial software library. Its main
 purpose is to foster research on real-time and realistic rendering algorithms.
 It provides a framework and several predefined algorithms allowing researchers
 to develop new ideas, without having to redevelop a full rendering engine to
-show their results. In return, the new algorithms developed with Proland must
-be licensed with the GPL (dual licensing with a commercial license is possible
-too, see http://proland.inrialpes.fr/contact.html).
+show their results. Proland is distributed under the BSD3 Licence. 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
