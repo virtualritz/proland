@@ -50,7 +50,7 @@ a procedural planet, or the Earth with various features.
 The procedural scenes can be run directly (the first run precomputes some
 data, so you need to launch the example again to actually run it). However
 the Earth scenes need some terrain data. You need to download it by following
-the instructions on http://proland.inrialpes.fr/download.html. You must then
+the instructions on http://proland.inrialpes.fr/download.html . You must then
 update the demo/init.bat file with the directory where you downloaded the data
 (for optimal performance, store this data on a SSD drive if possible).
 
